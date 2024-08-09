@@ -1,4 +1,21 @@
 import streamlit as st
-from streamlit.connections import SQLConnection
-conn = st.connection("my_sql", type=SQLConnection)
+
+import mysql.connector
+con = mysql.connector.connect(
+            host='localhostc',
+            user='root',
+            passwd='bunny',
+            auth_plugin='mysql_native_password',
+            database='secretkeys'
+            
+)
+cor=con.cursor()
+cor.execute("select * from secret;")
+r=cor.fetchone()
+con.close()
+api_key=r[0]
+access_id= r[1]
+app_pass=r[2]
+app_email=r[3]
+
 
