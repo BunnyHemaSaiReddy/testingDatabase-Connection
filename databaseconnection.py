@@ -1,22 +1,21 @@
 import streamlit as st
-
 import mysql.connector
 con = mysql.connector.connect(
-            host='127.0.0.1',
-            port=3306,
-            user='root',
-            passwd='bunny',
-            auth_plugin='mysql_native_password',
-            database='secretkeys'
+            host='sql12.freesqldatabase.com',
+            user='sql12725000',
+            passwd='vWBNC74tBJ',
+            database='sql12725000'
             
 )
 cor=con.cursor()
 cor.execute("select * from secret;")
 r=cor.fetchone()
+print(r)
 con.close()
-api_key=r[0]
-access_id= r[1]
-app_pass=r[2]
+api_key=r[0]+'FzBzcZX'
+access_id= r[1]+'VKZLQISHY'
+app_pass=r[2]+' fpvu uwlr'
 app_email=r[3]
+
 
 
