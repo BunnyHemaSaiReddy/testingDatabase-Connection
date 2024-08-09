@@ -1,6 +1,5 @@
 mysql-connector-python
-mysqlclient==2.2.4
-SQLAlchemy==2.0.32
+mysql==0.0.3
 streamlit==1.37.1
-sqlalchemy
+
 
